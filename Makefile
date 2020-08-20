@@ -98,9 +98,9 @@ endif
 # you may need to add
 # -lbz2 -lsnappy -lz -llz4 
 ifeq ($(ROCKSDB_LIB_PATH),)
-CDEPS_LDFLAGS=-lrocksdb
+CDEPS_LDFLAGS=$(ROCKSDB_LIB_FLAG)
 else
-CDEPS_LDFLAGS=-L$(ROCKSDB_LIB_PATH) -lrocksdb
+CDEPS_LDFLAGS=-L$(ROCKSDB_LIB_PATH) $(ROCKSDB_LIB_FLAG)
 endif
 
 ifneq ($(ROCKSDB_INC_PATH),)

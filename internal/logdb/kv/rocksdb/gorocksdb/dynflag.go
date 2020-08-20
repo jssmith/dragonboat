@@ -1,3 +1,4 @@
+// +build !linux
 package gorocksdb
 
 // #cgo LDFLAGS: -lrocksdb -lstdc++ -lm
